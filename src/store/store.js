@@ -1,17 +1,10 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// Creamos un "slice" para el usuario
 const userSlice = createSlice({
   name: 'user',
-  initialState: { nombre: 'Estudiante' },
-  reducers: {
-    setNombre: (state, action) => {
-      state.nombre = action.payload;
-    },
-  },
+  initialState: { nombre: 'Martina' }, // Poné tu nombre acá
+  reducers: {},
 });
-
-export const { setNombre } = userSlice.actions;
 
 export const store = configureStore({
   reducer: {
